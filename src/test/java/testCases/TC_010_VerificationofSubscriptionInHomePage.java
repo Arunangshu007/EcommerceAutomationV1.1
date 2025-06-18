@@ -28,7 +28,7 @@ import testBase.BaseClass;
 
 public class TC_010_VerificationofSubscriptionInHomePage extends BaseClass{
 	
-	@Test(groups={"Regression", "Master"})
+	@Test(groups={"Master"})
 	public void verify_SubscriptioninHomePage() throws InterruptedException
 	{
 		logger.info("***** Starting TC_009_VerificationofProductSearch *****");
