@@ -1,0 +1,109 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class HomePage extends BasePage {
+
+	public HomePage(WebDriver driver) {
+		super(driver);
+		
+	}
+	
+	//Displaying homepage
+	
+	@FindBy(xpath="//img[@alt='Website for automation practice']")
+	
+	WebElement pageLogo;
+	
+	public boolean getLogoOfPage()
+	{
+		return pageLogo.isDisplayed();
+	}
+		
+	//4. Click on 'Signup / Login' button
+	@FindBy(xpath="//a[normalize-space()='Signup / Login']")
+	WebElement link_signup;
+	
+	public void clickSignupLogin()
+	{	
+	link_signup.click();
+	}
+	
+	//4. Click on 'Contact Us' button
+	
+	@FindBy(xpath="//i[@class='fa fa-envelope']")
+	WebElement link_ContactUs;
+	
+	public void clickContactUs()
+	{
+		link_ContactUs.click();
+	}
+	
+	//4. Click on 'Test Cases' button
+	@FindBy(xpath="//a[contains(text(),'Test Cases')]")
+	WebElement link_Testcase;
+	
+	public void clickTestcases()
+	{
+		link_Testcase.click();
+	}
+	
+	//5. Verify user is navigated to test cases page successfully
+	
+	@FindBy(xpath="//span[contains(text(),'Below is the list of test Cases')]")
+	WebElement testCasePageCnfMessage;
+	
+	public String getTestCasePageConfirmationMessage()
+	{
+		try
+		{
+		return testCasePageCnfMessage.getText();
+		}
+		catch(Exception e)
+		{
+			return e.getMessage();
+		}
+	}
+	
+	//4. Click on 'Products' button
+	
+	@FindBy(xpath="//a[text()=' Products']")
+	WebElement btn_Product;
+	
+	public void clickonProductLink()
+	{
+		btn_Product.click();
+	}
+	
+	//4. Scroll down to footer	
+	public void scrolltoFooter() throws InterruptedException
+	{
+	JavascriptExecutor js=(JavascriptExecutor) driver;
+	js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	
+	Thread.sleep(3000);
+	System.out.println(js.executeScript("return window.pageYOffset;"));
+	}
+	
+	//6. Enter email address in input and click arrow button
+	@FindBy(xpath="//input[@id='susbscribe_email']")
+	WebElement searchbox_email;
+	
+	@FindBy(xpath="//i[@class='fa fa-arrow-circle-o-right']")
+	WebElement click_btn;
+	
+	public void setEmailAdd(String email)
+	{
+		searchbox_email.sendKeys(email);
+	}
+	
+	public void clickbutton()
+	{
+		click_btn.click();
+	}
+
+}
