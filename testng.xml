@@ -20,6 +20,7 @@
       <class name="testCases.TC_008_VerificationofProductDetailsPage"/>
       <class name="testCases.TC_009_VerificationofProductSearch"/>
       <class name="testCases.TC_010_VerificationofSubscriptionInHomePage"/>
+      <class name="testCases.TC_011_VerificationofSubscriptionInCartPage"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

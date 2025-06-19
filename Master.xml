@@ -11,6 +11,7 @@
   	<parameter name="browser"  value="chrome"/>  
     <classes>
       <class name="testCases.TC_010_VerificationofSubscriptionInHomePage"/>
+      <class name="testCases.TC_011_VerificationofSubscriptionInCartPage"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

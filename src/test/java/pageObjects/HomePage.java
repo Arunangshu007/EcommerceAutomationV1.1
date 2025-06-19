@@ -126,4 +126,54 @@ public class HomePage extends BasePage {
 		click_btn.click();
 	}
 	
+	//4. Click 'Cart' button
+	@FindBy(xpath="//a[normalize-space()='Cart']//i[@class='fa fa-shopping-cart']")
+	WebElement Btn_CartLinkButton;
+	
+	public void Click_CartLinkButton()
+	{
+		Btn_CartLinkButton.click();
+	}
+	
+	//5. Scroll down to footer
+	public void scrolltoFooterCartPage() throws InterruptedException
+	{
+	JavascriptExecutor js=(JavascriptExecutor) driver;
+	js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	
+	Thread.sleep(3000);
+	System.out.println(js.executeScript("return window.pageYOffset;"));
+	}
+	
+	//6. Verify text 'SUBSCRIPTION'
+	@FindBy(xpath="//h2[text()='Subscription']")
+	WebElement txt_CartSubscription;
+	public String getSubscriptionMessageInCart()
+	{
+		try
+		{
+			return txt_CartSubscription.getText();
+		}
+		catch(Exception e)
+		{
+			return e.getMessage();
+		}
+	}
+	
+	//7. Enter email address in input and click arrow button
+	@FindBy(xpath="//input[@placeholder='Your email address']")
+	WebElement searchbox_CartEmail;
+	
+	@FindBy(xpath="//i[@class='fa fa-arrow-circle-o-right']")
+	WebElement click_Cartbtn;
+	
+	public void setCartEmailAddress(String email)
+	{
+		searchbox_CartEmail.sendKeys(email);
+	}
+	
+	public void clickCartButton()
+	{
+		click_Cartbtn.click();
+	}
 }
