@@ -10,8 +10,8 @@
     <classes>
       <class name="testCases.TC_010_VerificationofSubscriptionInHomePage">
         <methods>
-          <include name="verify_productDetails"/>
           <include name="tearDown"/>
+          <include name="verify_SubscriptioninHomePage"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.TC_010_VerificationofSubscriptionInHomePage -->

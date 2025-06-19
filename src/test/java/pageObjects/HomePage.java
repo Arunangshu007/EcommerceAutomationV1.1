@@ -1,10 +1,14 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage {
 
@@ -89,6 +93,22 @@ public class HomePage extends BasePage {
 	System.out.println(js.executeScript("return window.pageYOffset;"));
 	}
 	
+	//5. Verify text 'SUBSCRIPTION'
+	@FindBy(xpath="//h2[text()='Subscription']")
+	WebElement txt_subscription;
+	
+	public String getSubscriptionMessage()
+	{
+		try
+		{
+			return txt_subscription.getText();
+		}
+		catch(Exception e)
+		{
+			return e.getMessage();
+		}
+	}
+	
 	//6. Enter email address in input and click arrow button
 	@FindBy(xpath="//input[@id='susbscribe_email']")
 	WebElement searchbox_email;
@@ -105,5 +125,5 @@ public class HomePage extends BasePage {
 	{
 		click_btn.click();
 	}
-
+	
 }

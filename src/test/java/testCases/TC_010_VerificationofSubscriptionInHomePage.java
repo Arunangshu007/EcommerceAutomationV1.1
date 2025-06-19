@@ -23,7 +23,6 @@ import testBase.BaseClass;
 4. Scroll down to footer
 5. Verify text 'SUBSCRIPTION'
 6. Enter email address in input and click arrow button
-7. Verify success message 'You have been successfully subscribed!' is visible
 */
 
 public class TC_010_VerificationofSubscriptionInHomePage extends BaseClass{
@@ -43,15 +42,14 @@ public class TC_010_VerificationofSubscriptionInHomePage extends BaseClass{
 		hp.scrolltoFooter();
 		
 		//5. Verify text 'SUBSCRIPTION'	
-		logger.info("***** User navigated to ALL PRODUCTS page successfully *****");
+		logger.info("***** Verification if Subscription text is populating in Homepage *****");
+		String ActSubsMsg=hp.getSubscriptionMessage();
+		Assert.assertEquals(ActSubsMsg, "SUBSCRIPTION");
 		
 		//6. Enter email address in input and click arrow button
 		logger.info("***** Provided email address in input box *****");	
 		hp.setEmailAdd(p.getProperty("email"));
 		hp.clickbutton();
-		
-		//7. Verify success message 'You have been successfully subscribed!' is visible
-		logger.info("***** Verification of Search Product message is displayed *****");
 		
 	
 		
