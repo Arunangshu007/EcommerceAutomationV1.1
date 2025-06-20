@@ -10,8 +10,9 @@
   <parameter name="os" value="Windows" />
   	<parameter name="browser"  value="chrome"/>  
     <classes>
-      <class name="testCases.TC_010_VerificationofSubscriptionInHomePage"/>
-      <class name="testCases.TC_011_VerificationofSubscriptionInCartPage"/>
+      <!--<class name="testCases.TC_010_VerificationofSubscriptionInHomePage"/>-->
+      <!--<class name="testCases.TC_011_VerificationofSubscriptionInCartPage"/>-->
+      <class name="testCases.TC_012_VerificationofAddingProductInCart"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

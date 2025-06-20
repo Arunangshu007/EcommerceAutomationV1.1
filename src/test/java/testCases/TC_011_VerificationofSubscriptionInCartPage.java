@@ -31,7 +31,7 @@ public class TC_011_VerificationofSubscriptionInCartPage extends BaseClass{
 	@Test(groups={"Regression", "Master"})
 	public void verify_SubscriptioninHomePage() throws InterruptedException
 	{
-		logger.info("***** Starting TC_009_VerificationofProductSearch *****");
+		logger.info("***** Starting TC_011_VerificationofSubscriptionInCartPage *****");
 		HomePage hp=new HomePage(driver);
 		
 		//3. Verify that home page is visible successfully
@@ -40,7 +40,7 @@ public class TC_011_VerificationofSubscriptionInCartPage extends BaseClass{
 		
 		//4. Click 'Cart' button
 		logger.info("***** Clicking on Cart Button of Homepage *****");
-		hp.Click_CartLinkButton();
+		hp.click_CartLinkButton();
 		
 		//5. Scroll down to footer
 		logger.info("***** Scrolling down to footer of Cart *****");

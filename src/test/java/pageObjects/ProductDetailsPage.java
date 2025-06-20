@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class ProductDetailsPage extends BasePage {
@@ -147,4 +148,55 @@ public class ProductDetailsPage extends BasePage {
 	   public List<WebElement> getSearchResultProducts() {
 	        return allsearchproducts;
 	    }
+	   
+	 //5. Hover over first product and click 'Add to cart'
+		
+		@FindBy(xpath="(//p[text()='Blue Top'])[1]")
+		WebElement first_product;
+		
+		@FindBy(xpath="(//a[@class='btn btn-default add-to-cart'])[1]")
+		WebElement Add_to_cart;
+		
+		public void scrollToFirstProduct()
+		{
+			//JavascriptExecutor js=(JavascriptExecutor) driver;
+			//js.executeScript("arguments[0].scrollIntoView(true)", first_product);
+			
+			Actions actions = new Actions(driver);
+			actions.moveToElement(first_product).perform();
+		}
+		
+		public void clickAddToCart()
+		{
+			Add_to_cart.click();
+		}
+		
+		@FindBy(xpath="//button[@data-dismiss='modal']")
+		WebElement shop;
+		
+		//6. Click 'Continue Shopping' button
+		public void clickContinueShopping()
+		{
+			shop.click();
+		}
+		
+		//7. Hover over second product and click 'Add to cart'
+		
+		@FindBy(xpath="(//a[@data-product-id='2'])[1]")
+		WebElement Add_to_cart2;
+		
+		public void clickAddToCart2()
+		{
+			Add_to_cart2.click();
+		}
+		
+		//8. Click 'View Cart' button
+		
+				@FindBy(xpath="//u[text()='View Cart']")
+				WebElement view_cart;
+				
+				public void clickViewCart()
+				{
+					view_cart.click();
+				}
 }

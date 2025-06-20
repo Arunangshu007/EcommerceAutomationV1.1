@@ -30,7 +30,7 @@ public class TC_010_VerificationofSubscriptionInHomePage extends BaseClass{
 	@Test(groups={"Master"})
 	public void verify_SubscriptioninHomePage() throws InterruptedException
 	{
-		logger.info("***** Starting TC_009_VerificationofProductSearch *****");
+		logger.info("***** Starting TC_010_VerificationofSubscriptionInHomePage *****");
 		HomePage hp=new HomePage(driver);
 		
 		//3. Verify that home page is visible successfully

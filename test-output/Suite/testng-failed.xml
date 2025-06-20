@@ -8,13 +8,13 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.TC_010_VerificationofSubscriptionInHomePage">
+      <class name="testCases.TC_012_VerificationofAddingProductInCart">
         <methods>
-          <include name="tearDown"/>
           <include name="verify_SubscriptioninHomePage"/>
+          <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.TC_010_VerificationofSubscriptionInHomePage -->
+      </class> <!-- testCases.TC_012_VerificationofAddingProductInCart -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -21,6 +21,7 @@
       <class name="testCases.TC_009_VerificationofProductSearch"/>
       <class name="testCases.TC_010_VerificationofSubscriptionInHomePage"/>
       <class name="testCases.TC_011_VerificationofSubscriptionInCartPage"/>
+      <class name="testCases.TC_012_VerificationofAddingProductInCart"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
