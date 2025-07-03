@@ -30,7 +30,7 @@ import testBase.BaseClass;
 public class TC_009_VerificationofProductSearch extends BaseClass{
 	
 	@Test(groups={"Regression", "Master"})
-	public void verify_productDetails()
+	public void verify_productSearch()
 	{
 		logger.info("***** Starting TC_009_VerificationofProductSearch *****");
 		HomePage hp=new HomePage(driver);

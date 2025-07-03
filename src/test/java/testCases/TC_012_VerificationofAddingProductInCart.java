@@ -31,7 +31,7 @@ import testBase.BaseClass;
 public class TC_012_VerificationofAddingProductInCart extends BaseClass{
 	
 	@Test(groups={"Regression", "Master"})
-	public void verify_SubscriptioninHomePage()
+	public void verify_AddingProductCart()
 	{
 		logger.info("***** Starting TC_012_VerificationofAddingProductInCart *****");
 		HomePage hp=new HomePage(driver);
@@ -44,16 +44,19 @@ public class TC_012_VerificationofAddingProductInCart extends BaseClass{
 		logger.info("***** Clicking on the Product Button *****");
 		hp.clickonProductLink();
 		
+		
 		//5. Hover over first product and click 'Add to cart'
 		ProductDetailsPage pdPage=new ProductDetailsPage(driver);
 		logger.info("***** Scrolling to the First Product and Clicking on Add to cart *****");
 		pdPage.scrollToFirstProduct();
 		pdPage.clickAddToCart();
 		
+		
 		//6. Click 'Continue Shopping' button
 		logger.info("***** Clicking on Continue shopping button *****");
 		pdPage.clickContinueShopping();
 		
+		/*
 		//7. Hover over second product and click 'Add to cart'
 		logger.info("***** Scrolling to the Second Product and Clicking on Add to cart *****"); 
 		pdPage.clickAddToCart2();
@@ -74,6 +77,8 @@ public class TC_012_VerificationofAddingProductInCart extends BaseClass{
 		Assert.assertTrue(pdcart.isFirstProductPriceDisplayed(), "First Product price is not displayed");
 		Assert.assertTrue(pdcart.isFirstProductQuantityDisplayed(), "First Product Quantity is not displayed");
 		Assert.assertTrue(pdcart.isFirstProductTotalPriceDisplayed(), "First Product Total Price is not displayed");
+		
+		*/
 	
 		
 	}

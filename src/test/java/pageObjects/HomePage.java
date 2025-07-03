@@ -178,6 +178,45 @@ public class HomePage extends BasePage {
 		click_Cartbtn.click();
 	}
 	
+	//4. Click 'View Product' for any product on home page
+	@FindBy(xpath="(//i[@class='fa fa-plus-square'])[5]")
+	WebElement btn_viewproduct;
+	
+	public void click_ViewProduct()
+	{
+		JavascriptExecutor js=(JavascriptExecutor) driver;		
+		js.executeScript("arguments[0].click();", btn_viewproduct);
+	}
+	
+	//4. Add products to cart
+	@FindBy(xpath="(//a[@class='btn btn-default add-to-cart'])[45]")
+	WebElement link_AddProduct;
+	
+	public void ScrollToExpectedProduct()
+	{
+		//Actions actions=new Actions (driver);
+		//actions.moveToElement(link_AddProduct).perform();
+		
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true)", link_AddProduct);
+	}
+				
+	public void click_AddProductInCart()
+	{
+		link_AddProduct.click();;
+	}
+	
+	//5. Click 'Cart' button
+	
+	@FindBy(xpath="//u[text()='View Cart']")
+	
+	WebElement link_ViewCart;
+	
+	public void ClickOnCartButton()
+	{
+		link_ViewCart.click();
+	}
+	
 	
 	
 }

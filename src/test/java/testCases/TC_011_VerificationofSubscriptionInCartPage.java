@@ -29,7 +29,7 @@ import testBase.BaseClass;
 public class TC_011_VerificationofSubscriptionInCartPage extends BaseClass{
 	
 	@Test(groups={"Regression", "Master"})
-	public void verify_SubscriptioninHomePage() throws InterruptedException
+	public void verify_SubscriptioninCartPage() throws InterruptedException
 	{
 		logger.info("***** Starting TC_011_VerificationofSubscriptionInCartPage *****");
 		HomePage hp=new HomePage(driver);

@@ -10,9 +10,9 @@
     <classes>
       <class name="testCases.TC_012_VerificationofAddingProductInCart">
         <methods>
-          <include name="verify_SubscriptioninHomePage"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="verify_AddingProductCart"/>
         </methods>
       </class> <!-- testCases.TC_012_VerificationofAddingProductInCart -->
     </classes>

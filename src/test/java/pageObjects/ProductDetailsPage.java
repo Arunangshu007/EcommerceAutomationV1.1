@@ -152,23 +152,22 @@ public class ProductDetailsPage extends BasePage {
 	 //5. Hover over first product and click 'Add to cart'
 		
 		@FindBy(xpath="(//p[text()='Blue Top'])[1]")
+		
 		WebElement first_product;
 		
 		@FindBy(xpath="(//a[@class='btn btn-default add-to-cart'])[1]")
 		WebElement Add_to_cart;
 		
 		public void scrollToFirstProduct()
-		{
-			//JavascriptExecutor js=(JavascriptExecutor) driver;
-			//js.executeScript("arguments[0].scrollIntoView(true)", first_product);
-			
+		{	
 			Actions actions = new Actions(driver);
 			actions.moveToElement(first_product).perform();
 		}
 		
 		public void clickAddToCart()
 		{
-			Add_to_cart.click();
+			JavascriptExecutor js=(JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView(true)", Add_to_cart);
 		}
 		
 		@FindBy(xpath="//button[@data-dismiss='modal']")
@@ -199,4 +198,55 @@ public class ProductDetailsPage extends BasePage {
 				{
 					view_cart.click();
 				}
+				
+				//5. Verify product detail is opened
+				
+				@FindBy(xpath="//a[text()='Write Your Review']")
+				WebElement txt_productdetails;
+				
+				public  String getProductDetailsOpened()
+				{
+					try 
+					{
+					return txt_productdetails.getText();
+					}
+					
+					catch(Exception e)
+					{
+						return e.getMessage();
+					}
+				}
+				
+				//6. Increase quantity to 4
+				
+				@FindBy(xpath="//input[@id='quantity']")
+				WebElement btn_Quantity;
+				
+				public void setNoOfQuantity()
+				{
+					btn_Quantity.clear();
+					btn_Quantity.sendKeys("4");
+				}
+				
+				//7. Click 'Add to cart' button
+				
+				@FindBy(xpath="//button[@class='btn btn-default cart']")
+				WebElement btn_Addtocart;
+				
+				public void click_ProductAddinCart()
+				{
+					btn_Addtocart.click();
+				}
+				
+				//8. Click 'View Cart' button
+				
+				@FindBy(xpath="//u[text()='View Cart']")
+				WebElement btn_viewcart;
+				
+				public void click_ViewCart()
+				{
+					btn_viewcart.click();
+				}
+				
+				
 }

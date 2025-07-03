@@ -56,5 +56,24 @@ public class ProductCartPage extends BasePage {
 		{
 			return total_price1.isDisplayed();
 		}
+		
+		
+		//9. Verify that product is displayed in cart page with exact quantity
+		
+		@FindBy(xpath="//button[@class='disabled']")
+		WebElement txt_countQuantity;
+		
+		public String getNumberofQuantity()
+		{
+			try
+			{
+				return txt_countQuantity.getText();
+			}
+			catch(Exception e)
+			{
+				return e.getMessage();
+			}
+			
+		}
 
 }

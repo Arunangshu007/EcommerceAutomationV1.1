@@ -13,6 +13,8 @@
       <!--<class name="testCases.TC_010_VerificationofSubscriptionInHomePage"/>-->
       <!--<class name="testCases.TC_011_VerificationofSubscriptionInCartPage"/>-->
       <class name="testCases.TC_012_VerificationofAddingProductInCart"/>
+      <!--<class name="testCases.TC_013_VerificationofProductQuantityInCart"/>-->
+      <!--<class name="testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
