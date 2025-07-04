@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-03T23:47:22 IST" name="Suite" finished-at="2025-07-03T23:47:53 IST" duration-ms="31095">
+  <suite started-at="2025-07-04T23:25:25 IST" name="Suite" finished-at="2025-07-04T23:25:47 IST" duration-ms="21184">
     <groups>
       <group name="Master">
-        <method signature="TC_012_VerificationofAddingProductInCart.verify_AddingProductCart()[pri:0, instance:testCases.TC_012_VerificationofAddingProductInCart@1c32386d]" name="verify_AddingProductCart" class="testCases.TC_012_VerificationofAddingProductInCart"/>
+        <method signature="TC_014_VerificationofOrderPlacedRegisterWhileCheckout.verify_OrderPlacedWhileCheckout()[pri:0, instance:testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout@13d73fa]" name="verify_OrderPlacedWhileCheckout" class="testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout"/>
       </group> <!-- Master -->
       <group name="Regression">
-        <method signature="TC_012_VerificationofAddingProductInCart.verify_AddingProductCart()[pri:0, instance:testCases.TC_012_VerificationofAddingProductInCart@1c32386d]" name="verify_AddingProductCart" class="testCases.TC_012_VerificationofAddingProductInCart"/>
+        <method signature="TC_014_VerificationofOrderPlacedRegisterWhileCheckout.verify_OrderPlacedWhileCheckout()[pri:0, instance:testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout@13d73fa]" name="verify_OrderPlacedWhileCheckout" class="testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-07-03T23:47:22 IST" name="Test" finished-at="2025-07-03T23:47:53 IST" duration-ms="31095">
-      <class name="testCases.TC_012_VerificationofAddingProductInCart">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_012_VerificationofAddingProductInCart@1c32386d]" started-at="2025-07-03T23:47:22 IST" name="setup" finished-at="2025-07-03T23:47:32 IST" duration-ms="10321" status="PASS">
+    <test started-at="2025-07-04T23:25:25 IST" name="Test" finished-at="2025-07-04T23:25:47 IST" duration-ms="21184">
+      <class name="testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout@13d73fa]" started-at="2025-07-04T23:25:26 IST" name="setup" finished-at="2025-07-04T23:25:32 IST" duration-ms="5927" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,84 +29,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_AddingProductCart()[pri:0, instance:testCases.TC_012_VerificationofAddingProductInCart@1c32386d]" started-at="2025-07-03T23:47:32 IST" name="verify_AddingProductCart" finished-at="2025-07-03T23:47:52 IST" duration-ms="19893" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=138.0.7204.97)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [689dd262750a9ebf5600c1fd1df1130d, clickElement {id=f.552E709F5279EF3157B3DFE45664AF86.d.6571E4FF778DE14120FF6D56D566A987.e.86}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.97, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: C:\Users\baner\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52164/devtoo..., se:cdpVersion: 138.0.7204.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (689dd262750a9ebf5600c1fd1df1130d)] -> xpath: //button[@data-dismiss='modal']]
-Session ID: 689dd262750a9ebf5600c1fd1df1130d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=138.0.7204.97)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [689dd262750a9ebf5600c1fd1df1130d, clickElement {id=f.552E709F5279EF3157B3DFE45664AF86.d.6571E4FF778DE14120FF6D56D566A987.e.86}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.97, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: C:\Users\baner\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52164/devtoo..., se:cdpVersion: 138.0.7204.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (689dd262750a9ebf5600c1fd1df1130d)] -> xpath: //button[@data-dismiss='modal']]
-Session ID: 689dd262750a9ebf5600c1fd1df1130d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy30.click(Unknown Source)
-at pageObjects.ProductDetailsPage.clickContinueShopping(ProductDetailsPage.java:179)
-at testCases.TC_012_VerificationofAddingProductInCart.verify_AddingProductCart(TC_012_VerificationofAddingProductInCart.java:57)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="verify_OrderPlacedWhileCheckout()[pri:0, instance:testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout@13d73fa]" started-at="2025-07-04T23:25:32 IST" name="verify_OrderPlacedWhileCheckout" finished-at="2025-07-04T23:25:46 IST" duration-ms="14608" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_AddingProductCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_012_VerificationofAddingProductInCart@1c32386d]" started-at="2025-07-03T23:47:52 IST" name="tearDown" finished-at="2025-07-03T23:47:53 IST" duration-ms="305" status="PASS">
+        </test-method> <!-- verify_OrderPlacedWhileCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout@13d73fa]" started-at="2025-07-04T23:25:46 IST" name="tearDown" finished-at="2025-07-04T23:25:47 IST" duration-ms="347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC_012_VerificationofAddingProductInCart -->
+      </class> <!-- testCases.TC_014_VerificationofOrderPlacedRegisterWhileCheckout -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

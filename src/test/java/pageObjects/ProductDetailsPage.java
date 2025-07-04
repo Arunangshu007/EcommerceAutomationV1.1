@@ -167,7 +167,7 @@ public class ProductDetailsPage extends BasePage {
 		public void clickAddToCart()
 		{
 			JavascriptExecutor js=(JavascriptExecutor) driver;
-			js.executeScript("arguments[0].scrollIntoView(true)", Add_to_cart);
+			js.executeScript("arguments[0].click();", Add_to_cart);
 		}
 		
 		@FindBy(xpath="//button[@data-dismiss='modal']")
@@ -181,12 +181,15 @@ public class ProductDetailsPage extends BasePage {
 		
 		//7. Hover over second product and click 'Add to cart'
 		
-		@FindBy(xpath="(//a[@data-product-id='2'])[1]")
+		@FindBy(xpath="(//a[@class='btn btn-default add-to-cart'])[3]")
 		WebElement Add_to_cart2;
 		
 		public void clickAddToCart2()
 		{
-			Add_to_cart2.click();
+			//Add_to_cart2.click();
+			
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+		    js.executeScript("arguments[0].click();", Add_to_cart2);
 		}
 		
 		//8. Click 'View Cart' button

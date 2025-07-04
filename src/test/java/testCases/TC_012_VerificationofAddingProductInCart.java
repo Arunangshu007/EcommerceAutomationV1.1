@@ -31,7 +31,7 @@ import testBase.BaseClass;
 public class TC_012_VerificationofAddingProductInCart extends BaseClass{
 	
 	@Test(groups={"Regression", "Master"})
-	public void verify_AddingProductCart()
+	public void verify_AddingProductCart() throws InterruptedException
 	{
 		logger.info("***** Starting TC_012_VerificationofAddingProductInCart *****");
 		HomePage hp=new HomePage(driver);
@@ -55,11 +55,12 @@ public class TC_012_VerificationofAddingProductInCart extends BaseClass{
 		//6. Click 'Continue Shopping' button
 		logger.info("***** Clicking on Continue shopping button *****");
 		pdPage.clickContinueShopping();
-		
-		/*
+			
 		//7. Hover over second product and click 'Add to cart'
 		logger.info("***** Scrolling to the Second Product and Clicking on Add to cart *****"); 
 		pdPage.clickAddToCart2();
+		
+		Thread.sleep(3000);
 		
 		//8. Click 'View Cart' button
 		
@@ -78,7 +79,7 @@ public class TC_012_VerificationofAddingProductInCart extends BaseClass{
 		Assert.assertTrue(pdcart.isFirstProductQuantityDisplayed(), "First Product Quantity is not displayed");
 		Assert.assertTrue(pdcart.isFirstProductTotalPriceDisplayed(), "First Product Total Price is not displayed");
 		
-		*/
+		
 	
 		
 	}

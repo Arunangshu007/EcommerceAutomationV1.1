@@ -75,5 +75,127 @@ public class ProductCartPage extends BasePage {
 			}
 			
 		}
-
+		
+		//6. Verify that cart page is displayed
+		
+		@FindBy(xpath="//a[text()='Proceed To Checkout']")
+		WebElement txt_Checkout;
+		
+		public String getProceedToChekoutMessage()
+		{
+			try
+			{
+				return txt_Checkout.getText();
+			}
+			
+			catch(Exception e)
+			{
+				return e.getMessage();
+			}
+		}
+		
+		//7. Click Proceed To Checkout
+		
+		@FindBy(xpath="//a[@class='btn btn-default check_out']")
+		WebElement btn_checkout;
+		
+		public void clickProceedToCheckout()
+		{
+			btn_checkout.click();
+		}
+		
+		//8. Click 'Register / Login' button
+		@FindBy(xpath="//u[normalize-space()='Register / Login']")
+		WebElement btn_Register;
+		
+		public void clickRegisterLogin()
+		{
+			btn_Register.click();
+		}
+		
+		//14. Verify Address Details and Review Your Order
+		@FindBy(xpath="(//h3[@class='page-subheading'])[1]")
+		WebElement txt_Address;
+		
+		public String getAddressConfirmationMessage()
+		{
+			try
+			{
+				return txt_Address.getText();
+			}
+			catch(Exception e)
+			{
+				return e.getMessage();
+			}
+		}
+		
+		//15. Enter description in comment text area and click 'Place Order'
+		@FindBy(xpath="//textarea[@class='form-control']")
+		WebElement text_box;
+		
+		public void setTextInCommentBox(String textmessage)
+		{
+			text_box.sendKeys(textmessage);
+		}
+		
+		@FindBy(xpath="//a[@class='btn btn-default check_out']")
+		WebElement btn_PlaceOrder;
+		
+		public void clickPlaceOrder()
+		{
+			btn_PlaceOrder.click();
+		}
+		
+		//16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
+		@FindBy(xpath="//input[@class='form-control']")
+		WebElement txt_Cardname;
+		
+		@FindBy(xpath="//input[@name='card_number']")
+		WebElement txt_CardNo;
+		
+		@FindBy(xpath="//input[@class='form-control card-cvc']")
+		WebElement txt_CVC;
+		
+		@FindBy(xpath="//input[@class='form-control card-expiry-month']")
+		WebElement txt_month;
+		
+		@FindBy(xpath="//input[@class='form-control card-expiry-year']")
+		WebElement txt_year;
+		
+		public void setNameOfCard(String name)
+		{
+			txt_Cardname.sendKeys(name);
+		}
+		
+		public void setCardNumber(String number)
+		{
+			txt_CardNo.sendKeys(number);
+		}
+		
+		public void setCardCVC(String number)
+		{
+			txt_CVC.sendKeys(number);
+		}
+		
+		public void setMonth(String month)
+		{
+			txt_month.sendKeys(month);
+		}
+		
+		public void setYear(String year)
+		{
+			txt_year.sendKeys(year);
+		}
+		
+		//17. Click 'Pay and Confirm Order' button
+		
+		@FindBy(xpath="//button[@id='submit']")
+		WebElement btn_Confirmorder;
+		
+		public void clickConfirmOrder()
+		{
+			btn_Confirmorder.click();
+		}
+		
 }
+
